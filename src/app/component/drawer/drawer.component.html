@@ -1,0 +1,17 @@
+<div (click)="toggleDrawer()">
+  <div></div>
+  <div></div>
+  <div class=" last"></div>
+</div>
+
+<div class="drawer" [style.left]="showDrawer ? '0' : '-300px'">
+
+  <h1 (click)="toggleDrawer()">PRELO</h1>
+
+
+
+</div>
+<div class="mask" [style.display]="showDrawer ? 'block' : 'none'" [style.opacity]="showDrawer ? 1 : 0"
+  (click)="toggleDrawer()">
+
+</div>

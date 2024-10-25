@@ -1,0 +1,9 @@
+<form [formGroup]="itemForm" (ngSubmit)="createItem()">
+  <h1>Add Item</h1>
+  <label for="">Name</label>
+  <input type="text" [formControl]="itemForm.controls['name']" [ngModel]>
+  <label for="">Descrition</label>
+  <input type="text" [formControl]="itemForm.controls['description']" [ngModel]>
+  <input type="submit" name="" id="" value="Save">
+
+</form>

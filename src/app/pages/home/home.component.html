@@ -1,0 +1,16 @@
+<div class="pills">
+  @for (category of categories; track category.id) {
+  <div>{{category.name}}</div>
+  }
+</div>
+
+<div class="banner" style="background-image: url(home.jpg);">
+
+  <div class="call" routerLink="/new">ADD YOUR ITEMS</div>
+</div>
+
+<i class="material-icons">search</i>
+
+@for (item of items; track item.id) {
+<div>{{item.name}}</div>
+}

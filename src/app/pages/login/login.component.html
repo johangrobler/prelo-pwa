@@ -1,0 +1,10 @@
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+  <h1>Login</h1>
+  <label for="">Email</label>
+  <input type="email" [formControl]="loginForm.controls['email']" [ngModel]>
+  <label for="">Password</label>
+  <input type="password" [formControl]="loginForm.controls['password']" [ngModel]>
+  <input type="submit" name="" id="" value="Sign in">
+
+  <a routerLink="/register">New here? Create an account</a>
+</form>

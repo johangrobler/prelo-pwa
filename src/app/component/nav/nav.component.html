@@ -1,0 +1,19 @@
+<header>
+  <app-drawer></app-drawer>
+  <h1 routerLink="/">PRELO</h1>
+  <div class="search">
+
+    <i class="material-icons">search</i> <input>
+  </div>
+  <div class="spacer">
+
+  </div>
+  @if(authService.isAuthenticated) {
+  <i class="material-icons" routerLink="/profile">account_circle</i>
+
+  }
+
+  @if(!authService.isAuthenticated) {
+  <div class="btn" routerLink="/register">CREATE ACCOUNT</div>
+  }
+</header>
