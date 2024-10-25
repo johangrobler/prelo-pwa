@@ -1,4 +1,4 @@
-<div (click)="toggleDrawer()">
+<div (click)="toggleDrawer()" class="hamburger">
   <div></div>
   <div></div>
   <div class=" last"></div>
@@ -8,10 +8,40 @@
 
   <h1 (click)="toggleDrawer()">PRELO</h1>
 
+  <div routerLink="/profile" (click)="toggleDrawer()">
+    <i class="material-icons-outlined">account_circle</i>
+    <div>Profile</div>
+  </div>
+
+
+  <div routerLink="/items" (click)="toggleDrawer()">
+    <i class="material-icons">search</i>
+    <div>My Items </div>
+  </div>
+
+  <div routerLink="/items" (click)="toggleDrawer()">
+    <i class="material-icons">list</i>
+    <div>Orders </div>
+  </div>
+
+
+  <div routerLink="/items" (click)="toggleDrawer()">
+    <i class="material-icons-outlined">shopping_bag</i>
+    <div>Purchases </div>
+  </div>
+
+
+
+  <div routerLink="/items" (click)="toggleDrawer()">
+    <i class="material-icons-outlined">people</i>
+    <div>Customers </div>
+  </div>
+
 
 
 </div>
 <div class="mask" [style.display]="showDrawer ? 'block' : 'none'" [style.opacity]="showDrawer ? 1 : 0"
   (click)="toggleDrawer()">
+
 
 </div>

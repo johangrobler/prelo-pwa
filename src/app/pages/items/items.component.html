@@ -1,0 +1,25 @@
+<div class="list-title">
+
+  <h2>Items</h2>
+  <button routerLink="/new">ADD YOUR ITEMS</button>
+</div>
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>category_id</th>
+    <th>brand</th>
+    <th>user</th>
+    <th>Added</th>
+  </tr>
+  @for (item of items; track item.ID) {
+  <tr>
+    <td>{{item.name}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.category_id}}</td>
+    <td>{{item.brand_id}}</td>
+    <td>{{item.user_id}}</td>
+    <td>{{item.CreatedAt | date }}</td>
+  </tr>
+  }
+</table>

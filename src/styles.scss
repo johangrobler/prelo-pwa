@@ -18,7 +18,8 @@
   initial-value: #A90686
 }
 
-input {
+input,
+select {
   width: 360px;
   padding: 10px 20px;
   border: 1px solid #ddd;
@@ -29,6 +30,8 @@ input {
   font-size: 15px;
   font-weight: 500;
 }
+
+
 
 label {
   color: #444;
@@ -85,7 +88,48 @@ button {
   border: 1px solid var(--main-color);
   color: white;
   font-size: 12px;
-  padding: 12px 24px;
+  padding: 10px 24px;
   cursor: pointer;
   border-radius: 2px;
+}
+
+
+table {
+
+  border-spacing: 0px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #F5F5F5;
+  padding-bottom: 50px;
+
+  th {
+    border-bottom: 2px solid #F5F5F5;
+    padding: 16px 16px;
+    text-align: left;
+    background-color: #F5F5F5;
+    font-size: 14px;
+  }
+
+  td {
+    border-bottom: 1px solid #eee;
+    padding: 16px 16px;
+    color: #444;
+
+    div {
+      color: #777;
+      font-size: 14px;
+    }
+  }
+}
+
+.list-title {
+  display: flex;
+  align-items: center;
+  height: 90px;
+
+  h2 {
+    flex: 1
+  }
+
 }

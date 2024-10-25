@@ -4,6 +4,19 @@
   <input type="text" [formControl]="itemForm.controls['name']" [ngModel]>
   <label for="">Descrition</label>
   <input type="text" [formControl]="itemForm.controls['description']" [ngModel]>
-  <input type="submit" name="" id="" value="Save">
 
+  <label for="">Categories</label>
+  <select [formControl]="itemForm.controls['category_id']" [ngModel]>
+    @for (category of categories; track category.ID) {
+    <option value="{{category.ID}}">{{category.name}} {{category.ID}}</option>
+    }
+  </select>
+  <label for="">Categories</label>
+  <select [formControl]="itemForm.controls['brand_id']" [ngModel]>
+    @for (brand of brands; track brand.id) {
+    <option value="{{brand.ID}}">{{brand.name}} {{brand.ID}}</option>
+    }
+
+  </select>
+  <input type="submit" name="" id="" value="Save">
 </form>

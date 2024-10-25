@@ -1,4 +1,4 @@
-div {
+.hamburger {
   div {
     background-color: #333;
 
@@ -26,6 +26,17 @@ div {
   z-index: 1000;
   padding: 40px;
   transition: left 0.3s ease-in-out;
+
+  div {
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+
+    i {
+      margin-right: 10px;
+    }
+  }
 }
 
 .mask {
