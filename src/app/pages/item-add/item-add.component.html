@@ -1,5 +1,19 @@
 <form [formGroup]="itemForm" (ngSubmit)="createItem()">
   <h1>Add Item</h1>
+
+  <input #uploader type="file" accept="image/png,image/jpg,application/pdf" (change)="handleUpload($event)" multiple
+    id="uploadFile">
+  @for (file of files; track file) {
+
+  {{file | json}}
+
+  @if (file.data) {
+  <div class="item-image">
+    <img [src]="file.data" alt="">
+  </div>
+  }
+
+  }
   <label for="">Name</label>
   <input type="text" [formControl]="itemForm.controls['name']" [ngModel]>
   <label for="">Descrition</label>
@@ -20,3 +34,5 @@
   </select>
   <input type="submit" name="" id="" value="Save">
 </form>
+
+<button (click)="postImage()">Upload</button>

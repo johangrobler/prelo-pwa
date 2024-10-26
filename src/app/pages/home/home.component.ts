@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ApiService } from '../../services/api.service';
 import { JsonPipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { ItemCardComponent } from '../item-card/item-card.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [JsonPipe, RouterLink],
+  imports: [JsonPipe, RouterLink, ItemCardComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
@@ -23,7 +24,6 @@ export class HomeComponent {
   }
 
   async getCategories() {
-
     this.categories = await this.api.get("categories");
     localStorage.setItem("categories", JSON.stringify(this.categories));
     console.log(this.categories)

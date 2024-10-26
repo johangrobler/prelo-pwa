@@ -9,8 +9,13 @@
   <div class="call" routerLink="/new">ADD YOUR ITEMS</div>
 </div>
 
-<i class="material-icons">search</i>
+<div class="list-title">
+  <h2>Items</h2>
+</div>
+<div class="grid">
 
-@for (item of items; track item.id) {
-<div>{{item.name}}</div>
-}
+  @for (item of items; track item.id) {
+  <app-item-card [model]="item">{{item.name}}</app-item-card>
+  }
+
+</div>

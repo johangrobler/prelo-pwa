@@ -59,4 +59,19 @@ export class ApiService {
 
     return headers
   }
+
+  // upload
+
+  async uploadDocument(formData: any) {
+
+    let headers = {
+      headers: new HttpHeaders({
+        "Authorization": "Bearer " + localStorage.getItem("access_token"),
+      })
+    };
+    let memberNumber = localStorage.getItem("memberNumber")!
+    let url = "https://seahorse-app-36ato.ondigitalocean.app/v1/image/i928430/avats"
+    return await this.http.post(url, formData, headers).toPromise()
+
+  }
 }

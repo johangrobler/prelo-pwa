@@ -31,3 +31,11 @@
     border-radius: 2px;
   }
 }
+
+.grid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
+}
